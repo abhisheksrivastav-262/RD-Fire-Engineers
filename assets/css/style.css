@@ -276,3 +276,8 @@ img[alt]{font-size:.82rem;color:#64748B}
   .ind-card{height:280px}
   .hero-badge{font-size:.76rem}
 }
+
+/* Completed project reference cards */
+.project-list .card{min-height:112px}
+.project-list h3{color:#0F172A}
+@media(max-width:640px){.project-list{grid-template-columns:1fr 1fr;gap:.75rem}.project-list .card{padding:.9rem !important;min-height:100px}.project-list h3{font-size:.98rem !important}}
