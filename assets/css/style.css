@@ -93,13 +93,13 @@ p.lead{font-size:clamp(1.05rem,1.6vw,1.25rem);color:#334155;max-width:42rem}
 .drawer-cta{display:grid;gap:.7rem;padding-top:1rem}
 
 /* Hero slideshow — premium light, no black background, optimized mobile/desktop */
-.hero{position:relative;min-height:86vh;display:flex;align-items:center;overflow:hidden;background:#F8FAFC}
+.hero{position:relative;margin-top:80px;min-height:clamp(620px,calc(86vh - 80px),820px);display:flex;align-items:center;overflow:hidden;background:#F8FAFC}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,23,42,.08) 0%,rgba(15,23,42,.18) 38%,rgba(15,23,42,.58) 100%);z-index:1}
 .hero-slides{position:absolute;inset:0;background:#F1F5F9}
 .hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease, transform 7s ease;transform:scale(1.04);background:#F1F5F9}
 .hero-slide.active{opacity:1;transform:scale(1)}
 .hero-slide img{width:100%;height:100%;object-fit:cover;object-position:center 35%;background:#F1F5F9}
-.hero-content{position:relative;z-index:2;width:min(1280px,92%);margin:0 auto;padding:8.5rem 0 4rem;display:grid;gap:1.4rem}
+.hero-content{position:relative;z-index:2;width:min(1280px,92%);margin:0 auto;padding:4rem 0;display:grid;gap:1.4rem}
 .hero-badge{display:inline-flex;align-items:center;gap:.6rem;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(12px);color:#fff;padding:.5rem .9rem;border-radius:999px;font-size:.82rem;font-weight:700;width:fit-content}
 .hero h1{color:#fff;max-width:18ch;text-shadow:0 10px 40px rgba(0,0,0,.4)}
 .hero h1 span{background:linear-gradient(135deg,#fff 30%,#FECACA 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
@@ -113,7 +113,7 @@ p.lead{font-size:clamp(1.05rem,1.6vw,1.25rem);color:#334155;max-width:42rem}
 .hero-arrows{position:absolute;right:2%;top:50%;transform:translateY(-50%);z-index:3;display:flex;flex-direction:column;gap:.6rem}
 .hero-arrows button{width:46px;height:46px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);color:#fff;backdrop-filter:blur(10px);display:grid;place-items:center}
 @media(max-width:1024px){
-  .hero{min-height:70vh}
+  .hero{margin-top:78px;min-height:calc(78vh - 78px)}
 }
 @media(max-width:800px){
   .hero{min-height:62vh}
@@ -124,22 +124,23 @@ p.lead{font-size:clamp(1.05rem,1.6vw,1.25rem);color:#334155;max-width:42rem}
   .hero h1{font-size:clamp(2.1rem,9vw,3.2rem)}
 }
 @media(max-width:768px){
-  .hero{min-height:auto;height:auto;display:block;background:#F8FAFC}
-  .hero-slides{position:relative;height:58vw;min-height:340px;max-height:520px;background:#F1F5F9}
-  .hero::after{background:linear-gradient(180deg,rgba(15,23,42,.06) 0%,rgba(15,23,42,.22) 44%,rgba(15,23,42,.62) 100%)}
-  .hero-slide img{object-fit:contain;object-position:center center;background:#F1F5F9;width:100%;height:100%}
-  .hero-content{position:relative;z-index:2;padding:2rem 0 1.8rem;margin-top:-70px;background:linear-gradient(180deg,transparent 0%,rgba(255,255,255,.92) 42%,#FFFFFF 100%);border-radius:18px 18px 0 0;box-shadow:0 -10px 30px rgba(0,0,0,.06)}
-  .hero h1{color:#0F172A;text-shadow:none}
+  .hero{display:block;margin-top:66px;min-height:0;height:auto;overflow:hidden}
+  .hero::after{display:none}
+  .hero-slides{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:16/9;min-height:0;max-height:none;background:#F1F5F9}
+  .hero-slide{inset:0}
+  .hero-slide img{display:block;width:100%;height:100%;object-fit:contain;object-position:center;background:#F1F5F9}
+  .hero-content{position:relative;top:auto;transform:none;width:min(1280px,92%);margin:0 auto !important;padding:1.6rem 0 1.8rem !important;background:#fff;border-radius:0;box-shadow:none}
+  .hero h1{color:#0F172A;text-shadow:none;font-size:clamp(2rem,8vw,3.2rem)}
   .hero h1 span{background:none;-webkit-text-fill-color:#DC2626;color:#DC2626}
-  .hero p{color:#334155}
+  .hero p{color:#334155;font-size:1rem}
   .hero-badge{background:#FEF2F2;border-color:#FECACA;color:#DC2626;backdrop-filter:none}
   .hero-indicators button{background:rgba(15,23,42,.18)}
   .hero-indicators button.active{background:var(--red)}
+  .hero-arrows{display:none}
 }
 @media(max-width:480px){
-  .hero-slides{height:72vw;min-height:300px;max-height:460px}
-  .hero-slide img{object-fit:contain}
-  .hero-content{margin-top:-40px;padding:1.4rem 0 1.4rem}
+  .hero-content{padding:1.35rem 0 1.5rem !important}
+  .hero h1{font-size:clamp(1.9rem,9vw,2.7rem)}
 }
 
 /* Cards & grids */

@@ -1,4 +1,4 @@
-# GS AGNI — Master Gallery Image Collection (15 Centralized Assets)
+# RD Fire Engineers — Master Gallery Image Collection (15 Centralized Assets)
 # Location: assets/gallery/ — SINGLE SOURCE, no duplicates
 
 All 15 images are the MASTER COLLECTION from Projects/Gallery, reused intelligently across all 10 pages. Verified via inspection of visual content.
@@ -14,12 +14,13 @@ All 15 images are the MASTER COLLECTION from Projects/Gallery, reused intelligen
 | 07 | gallery-07-industrial.jpg | Industrial facility / engineer | Industries (factory/warehouse), Projects industrial |
 | 08 | gallery-08-mcp-hooter.jpg | MCP manual call point / hooter | Fire Detection (MCP, hooters), Fire Alarm (MCP sounder) |
 | 09 | gallery-09-detection.jpg | Heat detector / detection devices | Fire Detection (heat detectors), Fire Alarm detection devices |
-| 10 | gallery-10-gs-agni-corridor.jpg | GS AGNI Notifier panel + MCP + strobe corridor (1.jpeg) | Hero ALL pages (actual business equipment), About, Projects actual, Contact |
-| 11 | gallery-11-gs-agni-training.jpg | GS AGNI extinguisher training person suit spraying (2.jpeg) | Hero Fire Extinguishers/Maintenance, Gallery actual service, Commercial |
-| 12 | gallery-12-gs-agni-wall.jpg | GS AGNI complete alarm wall panel+strobe+pull station (3.jpeg) | Fire Alarm Panels card, Gallery actual system |
-| 13 | gallery-13-gs-agni-pump.jpg | GS AGNI Electric Fire Pump Controller red cabinet (4.jpeg) | Hero Fire Protection Equipment, Pump cards, Gallery actual |
-| 14 | gallery-14-gs-agni-facilities.png | GS AGNI Facilities Protected Banner Office/Factory/Warehouses/Apartments (5.png) | Home trust, About, Industries, Projects actual business banner |
-| 15 | gallery-15-gs-agni-single.jpg | GS AGNI single red fire extinguisher portable (6.jpeg) | Fire Extinguishers ABC, Gallery actual product, Equipment |
+| 10 | gallery-10-gs-agni-corridor.jpg | RD Fire Engineers fire alarm panel + MCP + strobe corridor (1.jpeg) | Hero ALL pages (actual business equipment), About, Projects actual, Contact |
+| 11 | gallery-11-gs-agni-training.jpg | RD Fire Engineers extinguisher training suit spraying (2.jpeg) | Hero Fire Extinguishers/Maintenance, Gallery actual service, Commercial |
+| 12 | gallery-12-gs-agni-wall.jpg | RD Fire Engineers complete alarm wall panel+strobe+pull station (3.jpeg) | Fire Alarm Panels card, Gallery actual system |
+| 13 | gallery-13-gs-agni-pump.jpg | RD Fire Engineers electric fire pump controller red cabinet (4.jpeg) | Hero Fire Protection Equipment, Pump cards, Gallery actual |
+| 14 | rd-fire-engineers-services-poster.png | RD Fire Engineers services and address poster | About business posters |
+| 15a | rd-fire-engineers-poster.png | RD Fire Engineers brand and contact banner | Home trust, About, Contact, Industries, Projects poster placements |
+| 15 | gallery-15-gs-agni-single.jpg | RD Fire Engineers single red fire extinguisher portable (6.jpeg) | Fire Extinguishers ABC, Gallery actual product, Equipment |
 
 Rules Enforced:
 - Gallery images are PRIMARY — every major section uses Gallery image per visual content (alarm→alarm, extinguisher→extinguisher, detector→detector, pump→pump)

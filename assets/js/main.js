@@ -1,4 +1,4 @@
-// GS AGNI - main.js
+// RD Fire Engineers - main.js
 const $ = (s, r=document)=>r.querySelector(s);
 const $$ = (s, r=document)=>[...r.querySelectorAll(s)];
 
@@ -81,8 +81,8 @@ function initFormToWhatsApp(){
     const data = new FormData(form);
     const v = Object.fromEntries(data.entries());
     if(!v.name || !v.phone){ alert('Please enter Name and Phone number.'); return; }
-    const msg = `Hello GS AGNI – Fire & Safety Protection,%0A%0AI would like to enquire about your fire safety services.%0A%0AName: ${encodeURIComponent(v.name||'')}%0APhone: ${encodeURIComponent(v.phone||'')}%0AEmail: ${encodeURIComponent(v.email||'')}%0ACompany: ${encodeURIComponent(v.company||'')}%0AProperty Type: ${encodeURIComponent(v.property||'')}%0ARequired Service: ${encodeURIComponent(v.service||'')}%0AMessage: ${encodeURIComponent(v.message||'')}%0A%0APlease contact me regarding my requirement.`;
-    const url = `https://wa.me/918743095323?text=${msg}`;
+    const msg = `Hello RD Fire Engineers – Fire Protection Our Priority,%0A%0AI would like to enquire about your fire safety services.%0A%0AName: ${encodeURIComponent(v.name||'')}%0APhone: ${encodeURIComponent(v.phone||'')}%0AEmail: ${encodeURIComponent(v.email||'')}%0ACompany: ${encodeURIComponent(v.company||'')}%0AProperty Type: ${encodeURIComponent(v.property||'')}%0ARequired Service: ${encodeURIComponent(v.service||'')}%0AMessage: ${encodeURIComponent(v.message||'')}%0A%0APlease contact me regarding my requirement.`;
+    const url = `https://wa.me/917309504689?text=${msg}`;
     window.open(url,'_blank');
   });
 }

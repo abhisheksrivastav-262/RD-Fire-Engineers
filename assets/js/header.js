@@ -1,10 +1,10 @@
-// GS AGNI - Global Header Component - NEVER disappears
+// RD Fire Engineers - Global Header Component - NEVER disappears
 (function(){
   const headerHTML = (prefix) => `
   <div class="container header-inner">
-    <a class="brand" href="${prefix}index.html" aria-label="GS AGNI Home">
-      <div class="brand-mark">GS</div>
-      <div class="brand-text"><strong>GS AGNI</strong><span>Fire & Safety Protection</span></div>
+    <a class="brand" href="${prefix}index.html" aria-label="RD Fire Engineers Home">
+      <div class="brand-mark">RD</div>
+      <div class="brand-text"><strong>RD Fire Engineers</strong><span>Fire Protection Our Priority</span></div>
     </a>
     <nav class="nav" aria-label="Primary">
       <a href="${prefix}index.html" data-page="home">Home</a>
@@ -26,7 +26,7 @@
   <div class="drawer-backdrop"></div>
   <div class="drawer-panel">
     <div class="drawer-head">
-      <div class="brand"><div class="brand-mark">GS</div><div class="brand-text"><strong>GS AGNI</strong><span>Fire & Safety Protection</span></div></div>
+      <div class="brand"><div class="brand-mark">RD</div><div class="brand-text"><strong>RD Fire Engineers</strong><span>Fire Protection Our Priority</span></div></div>
       <button class="btn btn-white" id="drawerClose" aria-label="Close menu">✕</button>
     </div>
     <nav class="drawer-links">
@@ -42,10 +42,10 @@
       <a href="${prefix}contact.html" data-page="contact">Contact / Get a Quote</a>
     </nav>
     <div class="drawer-cta">
-      <a class="btn btn-primary" href="https://wa.me/918743095323" target="_blank" rel="noopener">WhatsApp Us</a>
-      <a class="btn btn-dark" href="tel:+918743095323">Call +91 87430 95323</a>
+      <a class="btn btn-primary" href="https://wa.me/917309504689" target="_blank" rel="noopener">WhatsApp Us</a>
+      <a class="btn btn-dark" href="tel:+917309504689">Call +91 73095 04689</a>
     </div>
-    <p class="muted" style="margin-top:1rem;font-size:.85rem">CN1054, Ali Vihar, Ali, New Delhi - 110076</p>
+    <p class="muted" style="margin-top:1rem;font-size:.85rem">Flat No: C-308, Girnar Apt, Shastri Nagar, Ambadi Road, Vasai West, Vasai Virar, Maharashtra - 401202</p>
   </div>`;
 
   function getPrefix(){
@@ -136,8 +136,8 @@
     drawer.querySelectorAll('.drawer-links a').forEach(a=> a.addEventListener('click', close));
     // Ensure brand visible - guard against accidental removal
     const brand = header.querySelector('.brand');
-    if(!brand || !brand.textContent.includes('GS AGNI')){
-      console.warn('GS AGNI brand missing - re-injecting');
+    if(!brand || !brand.textContent.includes('RD Fire Engineers')){
+      console.warn('RD Fire Engineers brand missing - re-injecting');
       header.innerHTML = headerHTML(prefix);
     }
     window._gsHeaderDone = true;
