@@ -323,4 +323,4 @@ img[alt]{font-size:.82rem;color:#64748B}
 @media(max-width:1000px){.automation-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:768px){.automation-intro{margin-top:66px;padding:2rem 0}.automation-intro-grid{grid-template-columns:1fr}.automation-intro h1{font-size:clamp(2.2rem,9vw,3.4rem)}.automation-poster{max-width:560px;margin:auto}.automation-brands{display:grid;gap:1rem}.automation-brands>p{text-align:left}.automation-footer{align-items:flex-start;flex-direction:column}}
 @media(max-width:480px){.automation-grid{grid-template-columns:1fr}.automation-card .card-body{padding:1rem}.sales-card{padding:1.2rem}.sales-card .hero-actions{display:grid}.sales-card .btn{white-space:normal;justify-content:center}}
-.team-phone{display:block;margin-top:.25rem;color:var(--red);font-size:.84rem;font-weight:700}
+.team-phone{display:block;margin-top:.25rem;color:var(--red);font-size:clamp(.62rem,1.4vw,.84rem);font-weight:700;white-space:nowrap}
