@@ -28,3 +28,17 @@ Rules Enforced:
 - Hero slideshow uses BEST Gallery images, 3s auto-change `main.js:40`, `object-fit:cover` `style.css:89`, equipment `contain` where full object needed `style.css:153`
 - Centralized at `assets/gallery/` — no duplicate copies, all pages reference same 15 assets via `assets/gallery/` (`../assets/gallery/` for subfolders)
 - All 6 new 1.jpeg–6.jpeg are part of master (10–15) and used per content inspection, not filename
+
+
+## Current RD Fire Engineers identity assets
+
+| Asset | Use |
+|---|---|
+| rd-fire-engineers-logo.png | Circular logo in site headers and footers |
+| sneha-singh-founder.png | Retained source image; no longer displayed as a founder portrait |
+| devendra-kumar-singh-founder.png | Devendra Kumar Singh founder portrait on About page |
+| rd-fire-engineers-systems-poster.png | Fire protection systems poster on About page |
+| rd-fire-engineers-automation-poster.png | Industrial electrical and automation product poster on Industrial Automation Products page |
+
+| rd-automation-product-range.png | User-supplied automation product range poster (PLCs, HMIs, SCADA, VFDs, servo and industrial components) | Industrial Automation Products page hero |
+| rd-automation-company-profile.png | User-supplied company profile poster; contact strip updated to current Sneha Singh sales number | Industrial Automation Products page company profile |

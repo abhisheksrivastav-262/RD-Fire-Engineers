@@ -1,9 +1,9 @@
 // RD Fire Engineers - Global Header Component - NEVER disappears
 (function(){
-  const headerHTML = (prefix) => `
+  const headerHTML = (prefix, salesOnly=false) => `
   <div class="container header-inner">
     <a class="brand" href="${prefix}index.html" aria-label="RD Fire Engineers Home">
-      <div class="brand-mark">RD</div>
+      <div class="brand-mark logo-mark"><img src="${prefix}assets/gallery/rd-fire-engineers-logo.png" alt="RD Fire Engineers logo"></div>
       <div class="brand-text"><strong>RD Fire Engineers</strong><span>Fire Protection Our Priority</span></div>
     </a>
     <nav class="nav" aria-label="Primary">
@@ -13,20 +13,21 @@
       <a href="${prefix}fire-extinguishers.html" data-page="extinguishers">Extinguishers</a>
       <a href="${prefix}fire-detection.html" data-page="detection">Detection</a>
       <a href="${prefix}fire-protection-equipment.html" data-page="equipment">Equipment</a>
+      <a href="${prefix}industrial-automation.html" data-page="products">Products</a>
       <a href="${prefix}maintenance.html" data-page="maintenance">Maintenance</a>
       <a href="${prefix}industries.html" data-page="industries">Industries</a>
       <a href="${prefix}projects.html" data-page="projects">Projects</a>
       <a href="${prefix}contact.html" data-page="contact">Contact</a>
     </nav>
-    <a class="btn btn-primary header-cta desktop-only" href="${prefix}contact.html">Get a Quote</a>
+    <a class="btn btn-primary header-cta desktop-only" href="${salesOnly ? '#sales-enquiry' : `${prefix}contact.html`}">${salesOnly ? 'Contact Sales' : 'Get a Quote'}</a>
     <button class="menu-btn" id="menuBtn" aria-label="Open navigation menu">☰</button>
   </div>`;
 
-  const drawerHTML = (prefix) => `
+  const drawerHTML = (prefix, salesOnly=false) => `
   <div class="drawer-backdrop"></div>
   <div class="drawer-panel">
     <div class="drawer-head">
-      <div class="brand"><div class="brand-mark">RD</div><div class="brand-text"><strong>RD Fire Engineers</strong><span>Fire Protection Our Priority</span></div></div>
+      <div class="brand"><div class="brand-mark logo-mark"><img src="${prefix}assets/gallery/rd-fire-engineers-logo.png" alt="RD Fire Engineers logo"></div><div class="brand-text"><strong>RD Fire Engineers</strong><span>Fire Protection Our Priority</span></div></div>
       <button class="btn btn-white" id="drawerClose" aria-label="Close menu">✕</button>
     </div>
     <nav class="drawer-links">
@@ -36,16 +37,18 @@
       <a href="${prefix}fire-extinguishers.html" data-page="extinguishers">Fire Extinguishers</a>
       <a href="${prefix}fire-detection.html" data-page="detection">Fire Detection & Safety Systems</a>
       <a href="${prefix}fire-protection-equipment.html" data-page="equipment">Fire Protection Equipment</a>
+      <a href="${prefix}industrial-automation.html" data-page="products">Industrial Automation Products</a>
       <a href="${prefix}maintenance.html" data-page="maintenance">Fire Safety Maintenance</a>
       <a href="${prefix}industries.html" data-page="industries">Industrial & Commercial Fire Safety</a>
       <a href="${prefix}projects.html" data-page="projects">Projects / Gallery</a>
       <a href="${prefix}contact.html" data-page="contact">Contact / Get a Quote</a>
     </nav>
     <div class="drawer-cta">
-      <a class="btn btn-primary" href="https://wa.me/917309504689" target="_blank" rel="noopener">WhatsApp Us</a>
-      <a class="btn btn-dark" href="tel:+917309504689">Call +91 73095 04689</a>
+      ${salesOnly
+        ? `<a class="btn btn-primary" href="https://wa.me/917065201509" target="_blank" rel="noopener">WhatsApp Sales — Sneha Singh</a><a class="btn btn-dark" href="tel:+917065201509">Call Sales — Sneha Singh · +91 70652 01509</a>`
+        : `<a class="btn btn-primary" href="https://wa.me/917309504689" target="_blank" rel="noopener">WhatsApp Us</a><a class="btn btn-dark" href="tel:+918451992448">Call +91 84519 92448</a>`}
     </div>
-    <p class="muted" style="margin-top:1rem;font-size:.85rem">Flat No: C-308, Girnar Apt, Shastri Nagar, Ambadi Road, Vasai West, Vasai Virar, Maharashtra - 401202</p>
+    ${salesOnly ? '' : '<p class="muted" style="margin-top:1rem;font-size:.85rem">Flat No: C-308, Girnar Apt, Shastri Nagar, Ambadi Road, Vasai West, Vasai Virar, Maharashtra - 401202</p>'}
   </div>`;
 
   function getPrefix(){
@@ -63,6 +66,7 @@
   function getActivePage(){
     const p = window.location.pathname.toLowerCase();
     if(p.includes('about')) return 'about';
+    if(p.includes('industrial-automation')) return 'products';
     if(p.includes('fire-alarm-systems')) return 'fire-alarm';
     if(p.includes('fire-extinguishers')) return 'extinguishers';
     if(p.includes('fire-detection')) return 'detection';
@@ -76,6 +80,7 @@
 
   function initGlobalHeader(){
     const prefix = getPrefix();
+    const salesOnly = document.body.dataset.salesOnly === 'true';
     // Find or create header
     let header = document.getElementById('site-header');
     if(!header){
@@ -89,17 +94,17 @@
       document.body.prepend(header);
     }
     header.className = 'header transparent';
-    header.innerHTML = headerHTML(prefix);
+    header.innerHTML = headerHTML(prefix, salesOnly);
     // ensure drawer exists
     let drawer = document.getElementById('drawer');
     if(!drawer){
       drawer = document.createElement('div');
       drawer.id = 'drawer';
       drawer.className = 'drawer';
-      drawer.innerHTML = drawerHTML(prefix);
+      drawer.innerHTML = drawerHTML(prefix, salesOnly);
       document.body.appendChild(drawer);
     } else {
-      drawer.innerHTML = drawerHTML(prefix);
+      drawer.innerHTML = drawerHTML(prefix, salesOnly);
       drawer.className = 'drawer';
     }
     // Active state — desktop + mobile
@@ -138,7 +143,7 @@
     const brand = header.querySelector('.brand');
     if(!brand || !brand.textContent.includes('RD Fire Engineers')){
       console.warn('RD Fire Engineers brand missing - re-injecting');
-      header.innerHTML = headerHTML(prefix);
+      header.innerHTML = headerHTML(prefix, salesOnly);
     }
     window._gsHeaderDone = true;
   }
